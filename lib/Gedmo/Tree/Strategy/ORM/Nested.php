@@ -471,10 +471,10 @@ class Nested implements Strategy
             $qb = $em->createQueryBuilder();
             $qb->update($config['useObjectClass'], 'node');
             if (isset($config['root'])) {
-                $qb->set('node.'.$config['root'], ':rid');
-                $qb->setParameter('rid', $newRoot);
-                $wrapped->setPropertyValue($config['root'], $newRoot);
-                $em->getUnitOfWork()->setOriginalEntityProperty($oid, $config['root'], $newRoot);
+//                $qb->set('node.'.$config['root'], ':rid');
+//                $qb->setParameter('rid', $newRoot);
+//                $wrapped->setPropertyValue($config['root'], $newRoot);
+//                $em->getUnitOfWork()->setOriginalEntityProperty($oid, $config['root'], $newRoot);
             }
             if (isset($config['level'])) {
                 $qb->set('node.'.$config['level'], $level);
